@@ -1,0 +1,90 @@
+{
+  "sprites" : [
+  ],
+  "layout" : {
+    "640x120" : {
+      "ops": [
+        {
+          "name": "background",
+          "type": "fill",
+          "color" : [255,255,255,0]
+        },
+        {
+          "name": "health",
+          "type": "image",
+          "filename": "resources/images/health.png",
+          "scale": false,
+          "dest" : [520, 2, 115, 115]
+        },
+        {
+          "name": "shield",
+          "type": "image",
+          "filename": "resources/images/shield.png",
+          "scale": false,
+          "dest" : [440, 45, 70, 70]
+        },
+        {
+          "name": "avatar",
+          "type": "image",
+          "filename": ".cached/avatar.jpg",
+          "scale": false,
+          "dest" : [0, 0, 115, 115]
+        },
+        {
+          "name": "player-name",
+          "type": "text",
+          "value": "<Player Name>",
+          "font" : "resources/fonts/Roboto-Regular.ttf",
+          "color" : [0,0,0,0],
+          "font-size" : 40,
+          "halign": "left",
+          "valign": "Top",
+          "dest" : [120, 0, 520, 40]
+        },
+        {
+          "name": "hit-points",
+          "type": "text",
+          "value": "888",
+          "font" : "resources/fonts/Roboto-Regular.ttf",
+          "color" : [0,0,0,0],
+          "font-size" : 60,
+          "halign": "center",
+          "valign": "top",
+          "dest" : [520, -5, 120, 120]
+        },
+        {
+          "name": "hit-point-divider",
+          "type": "fill",
+          "color" : [0,0,0,0],
+          "dest" : [520, 58, 115, 4]
+        },
+        {
+          "name": "hit-point-max",
+          "type": "text",
+          "value": "888",
+          "font" : "resources/fonts/Roboto-Regular.ttf",
+          "color" : [0,0,0,0],
+          "font-size" : 60,
+          "halign": "center",
+          "valign": "bottom",
+          "dest" : [520, 5, 120, 120]
+        },
+        {
+          "name": "armor-class",
+          "type": "text",
+          "value": "888",
+          "font" : "resources/fonts/Roboto-Regular.ttf",
+          "color" : [0,0,0,0],
+          "font-size" : 60,
+          "halign": "center",
+          "valign": "center",
+          "dest" : [440, 40, 70, 70]
+        }
+      ]
+
+    },
+    "1920x1080" : {
+
+    }
+  }
+}

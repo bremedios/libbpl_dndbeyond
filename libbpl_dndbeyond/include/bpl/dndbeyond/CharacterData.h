@@ -5,7 +5,7 @@
 #define BPL_DNDBEYOND_CHARACTERDATA_H
 
 #include <memory>
-
+#include <bpl/storage/Payload.h>
 #include <bpl/dndbeyond/api/Response.h>
 #include <bpl/dndbeyond/api/Data.h>
 
@@ -16,7 +16,7 @@ namespace bpl::dndbeyond {
         CharacterData();
         ~CharacterData();
 
-        [[nodiscard]] bool Load(const storage::Payload& payload);
+        [[nodiscard]] bool Load(const bpl::storage::Payload& payload);
 
         [[nodiscard]] const bpl::dndbeyond::api::Response& getApiResponse() const { return m_apiResponse; };
         [[nodiscard]] const bpl::dndbeyond::api::Data& getApiData() const { return m_apiResponse.getData(); };
