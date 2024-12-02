@@ -34,7 +34,7 @@ set(SOURCE_FILES src/Api.cpp
         src/api/Stats.cpp)
 
 add_library(bpl_dndbeyond SHARED ${SOURCE_FILES} ${PUBLIC_HEADER} )
-target_link_libraries(bpl_dndbeyond PRIVATE )
+target_link_libraries(bpl_dndbeyond PRIVATE bpl_net bpl_storage)
 
 install(TARGETS bpl_dndbeyond DESTINATION lib)
 install(FILES include/bpl/dndbeyond/Window.h DESTINATION include/bpl/net)

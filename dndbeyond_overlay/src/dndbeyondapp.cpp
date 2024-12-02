@@ -8,11 +8,13 @@
 
 #include <bpl/graphics/FontCache.h>
 #include <bpl/graphics/RenderObject.h>
+#include <bpl/graphics/LogicObject.h>
 #include <bpl/graphics/Window.h>
 #include <bpl/graphics/EventLoop.h>
 #include <bpl/graphics/ui/Window.h>
 #include <bpl/dndbeyond/Api.h>
-#include "OverlayWindow.h"
+
+#include "OverlayUpdater.h"
 
 #define OVERLAY_WIDTH 640
 #define OVERLAY_HEIGHT 120
@@ -56,6 +58,8 @@ int RunOverlay() {
         if (!uiWindowPtr->Load(renderer)) {
             std::cerr << "Failed to load UI Window" << std::endl;
 
+            delete uiWindowPtr;
+
             break;
         }
 
@@ -63,9 +67,14 @@ int RunOverlay() {
 
         bpl::graphics::EventLoopPtr loop = std::make_shared<bpl::graphics::EventLoop>();
 
+        OverlayUpdater* updater = new OverlayUpdater(renderObj);
+
+        bpl::graphics::LogicObjectPtr logicObj = bpl::graphics::LogicObjectPtr(updater);
+
         loop->setFramerate(30);
         loop->setRenderer(renderer);
         loop->addRenderObject(renderObj);
+        loop->addLogicObject(logicObj);
         loop->Run();
 
     } while (false);

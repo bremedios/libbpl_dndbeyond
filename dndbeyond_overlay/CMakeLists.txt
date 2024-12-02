@@ -13,7 +13,7 @@ find_package(SDL2 REQUIRED CONFIG COMPONENTS SDL2main)
 
 include_directories(${SDL_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS} ../libbpl_dndbeyond/include)
 
-add_executable(dndbeyond_overlay src/dndbeyondapp.cpp src/OverlayWindow.cpp
+add_executable(dndbeyond_overlay src/dndbeyondapp.cpp src/OverlayUpdater.cpp
         src/Debug.h)
 
 target_link_libraries(dndbeyond_overlay PRIVATE SDL2::SDL2 SDL2_ttf::SDL2_ttf SDL2_image::SDL2_image bpl_net bpl_storage bpl_dndbeyond bpl_graphics)

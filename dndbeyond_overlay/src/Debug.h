@@ -8,10 +8,10 @@
 
 #define __ENABLE_DNDBEYOND_OVERLAY_DEBUG    1
 
-#define ERROR_MSG(msg)  { std::cerr << __PRETTY_FUNCTION__ << ":" << msg; }
+#define ERROR_MSG(msg)  { std::cerr << "ERROR: " << __PRETTY_FUNCTION__ << ":" << msg; }
 
 #if defined(__ENABLE_DNDBEYOND_OVERLAY_DEBUG)
-    #define DEBUG_MSG(msg)  { std::cout << __PRETTY_FUNCTION__ << ":" << msg; }
+    #define DEBUG_MSG(msg)  { std::cout << "DEBUG: " << __PRETTY_FUNCTION__ << ":" << msg; }
 #else
     #define DEBUG_MSG(cmd)
 #endif // __ENABLE_DNDBEYOND_OVERLAY_DEBUG
