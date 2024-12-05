@@ -8,7 +8,7 @@ find_package(SDL2 REQUIRED CONFIG REQUIRED COMPONENTS SDL2)
 find_package(SDL2_ttf REQUIRED CONFIG REQUIRED COMPONENTS SDL2_TTF)
 find_package(SDL2_IMAGE REQUIRED CONFIG COMPONENTS SDL2_image)
 
-include_directories(include)
+include_directories(include ../../libbpl_storage/libbpl_storage/include ../../libbpl_net/libbpl_net/include)
 
 set(PUBLIC_HEADER include/bpl/dndbeyond/api/Class.h
         include/bpl/dndbeyond/api/Classes.h
