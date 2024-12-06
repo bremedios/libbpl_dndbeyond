@@ -19,7 +19,7 @@ public:
 
 //    void SetSelection(const std::string& selection);
 
-    void Logic(bpl::graphics::RendererPtr& renderer) override;
+    void Logic(bpl::graphics::RendererPtr& renderer, bpl::controls::InputPtr& input) override;
 private:
     void UpdatePlayerDetails_(bpl::graphics::RendererPtr& renderer);
     bool UpdateFiles_(bpl::graphics::RendererPtr& renderer, const std::string characterId, bpl::dndbeyond::CharacterDataPtr ptr, bool forceUpdate);

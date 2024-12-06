@@ -206,7 +206,7 @@ void OverlayUpdater::UpdatePlayerDetails_(bpl::graphics::RendererPtr& renderer) 
 
 }//UpdatePlayerDetails_
 
-void OverlayUpdater::Logic(bpl::graphics::RendererPtr& renderer) {
+void OverlayUpdater::Logic(bpl::graphics::RendererPtr& renderer, bpl::controls::InputPtr& input) {
     auto now = std::chrono::system_clock::now();
 
     if (now > m_nextUpdate) {

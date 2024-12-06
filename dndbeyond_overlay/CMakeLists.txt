@@ -11,7 +11,7 @@ find_package(SDL2_ttf REQUIRED CONFIG REQUIRED COMPONENTS SDL2_ttf)
 find_package(SDL2_image REQUIRED CONFIG REQUIRED COMPONENTS SDL2_image)
 find_package(SDL2 REQUIRED CONFIG COMPONENTS SDL2main)
 
-include_directories(${SDL_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS} ../libbpl_dndbeyond/include ../../libbpl_graphics/libbpl_graphics/include ../../libbpl_net/libbpl_net/include ../../libbpl_sys/libbpl_sys/include ../../libbpl_storage/libbpl_storage/include)
+include_directories(${SDL_INCLUDE_DIRS} ${SDL_TTF_INCLUDE_DIRS} ../libbpl_dndbeyond/include ../../libbpl_graphics/libbpl_graphics/include ../../libbpl_net/libbpl_net/include ../../libbpl_sys/libbpl_sys/include ../../libbpl_storage/libbpl_storage/include ../../libbpl_controls/libbpl_controls/include)
 add_executable(dndbeyond_overlay src/dndbeyondapp.cpp src/OverlayUpdater.cpp
         src/Debug.h)
 
